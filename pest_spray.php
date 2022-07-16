@@ -64,7 +64,7 @@
             // SQL QUERY
             (string) $item = $plant[$_POST['search']];
             //echo $item;
-            $query = "SELECT crop_id, diseases_image, spray_name, sprayrate_per20l_water, spray_interval, number_of_sprays, more_info FROM diseasespray_info
+            $query = "SELECT crop_id, pest_image, spray_name, sprayrate_per20l_water, spray_interval, number_of_sprays, more_info FROM pestspray_info
             WHERE crop_id = 3";
            // echo $query;
             // FETCHING DATA FROM DATABASE
@@ -79,9 +79,9 @@
                             <td>" . $row['crop_id']."</td>".
                         "</tr>".
                         "<tr>
-                            <td>DISEASE IMAGE"."</td>
+                            <td>PEST IMAGE"."</td>
                             <td>".
-                                "<img src=\"".$row['diseases_image']."\" width=300 height=auto>
+                                "<img src=\"".$row['pest_image']."\" width=300 height=auto>
                             </td>
                         </tr>
                         <tr>
